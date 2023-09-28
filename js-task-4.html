@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task-4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #f0ad4e;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #ec971f;
+        }
+
+        #date-result, #time-result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5bc0de;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <button id="showdate" onclick="showdate()">Show Date</button>
+            <p id="date-result"></p>
+            <button id="showtime" onclick="showTime()">Show Time</button>
+            <p id="time-result"></p>
+        </div>
+    </center>
+    <script>
+        function showdate(){
+                let date=document.getElementById("showtime");
+                date= new Date();
+                const months = [
+                    "January", "February", 
+                    "March", "April", "May", 
+                    "June", "July", "August",
+                    "September", "October", 
+                    "November", "December"
+                ];
+                document.getElementById("date-result").innerHTML=date.getDate()+"/"+months[date.getMonth()]+"/"+date.getFullYear();
+            }
+        
+        function showTime(){
+                let date=document.getElementById("showdate");
+                date= new Date();
+                document.getElementById("time-result").innerHTML=date;
+            }
+    </script>
+</body>
+</html>
